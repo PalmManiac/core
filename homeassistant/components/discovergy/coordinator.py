@@ -33,7 +33,7 @@ class DiscovergyUpdateCoordinator(DataUpdateCoordinator[Reading]):
             hass,
             _LOGGER,
             name=f"Discovergy meter {meter.meter_id}",
-            update_interval=timedelta(seconds=30),
+            update_interval=timedelta(seconds=2),
         )
 
     async def _async_update_data(self) -> Reading:
